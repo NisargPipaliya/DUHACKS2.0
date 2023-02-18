@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - FarMart</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="headfoot.css">
 </head>
-<style>
-   
-</style>
-
 <body>
-    <main>
-        <header>
-            <h1 class="logo">FarMart</h1>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="signin.php">Sign in</a></li>
-                </ul>
-            </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
-        </header>
-
-        <div class="main">
-        </div>
-        
-
-    </main>
     <footer>
         <div class="content">
           <div class="top">
@@ -52,10 +22,10 @@
           <div class="link-boxes">
             <ul class="box">
               <li class="link_name">Links</li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="signin.html">Sign in</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="about.php">About</a></li>
+              <li><a href="contact.php">Contact</a></li>
+              <li><a href="signin.php">Sign in</a></li>
     
             </ul>
             <ul class="box">
@@ -87,8 +57,5 @@
           </div>
         </div>
       </footer>
-
-    <script src="script.js"></script>
 </body>
-
 </html>

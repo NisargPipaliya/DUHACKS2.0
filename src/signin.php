@@ -1,6 +1,9 @@
 <?php
+// session_start();
 $login = false;
 $showerror = false;
+// $_SESSION['loggedin'] = false;
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -175,10 +178,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="signin.php">Sign in</a></li>
                 </ul>
             </nav>
             <label for="nav-toggle" class="nav-toggle-label">
@@ -190,24 +193,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         
     </main>
     <div class="main">
+        <form action="signin.php" method="post"> 
         <div class="form">
             <h2>Signin</h2>
             <div class="input">
                 <div class="inputBox">
                     <label for="">Username</label>
-                    <input type="text">
+                    <input type="text" name="username" >
                 </div>
                 <div class="inputBox">
                     <label for="">Password</label>
-                    <input type="password">
+                    <input type="password" name="password">
                 </div>
                 <div class="inputBox">
-                    <input type="submit" name="" value="Sign In"> 
+                    <input type="submit" name="submit" value="Sign In"> 
                 </div>
             </div>
             <p class="forgot">Not Registered Yet? <a href="#">Click Here</a></p>
             
         </div>
+</form>
     </div>
 
     <footer>
@@ -227,7 +232,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
               <li><a href="index.php">Home</a></li>
               <li><a href="about.php">About</a></li>
               <li><a href="contact.php">Contact</a></li>
-              <li><a href="signin.html">Sign in</a></li>
+              <li><a href="signin.php">Sign in</a></li>
     
             </ul>
             <ul class="box">

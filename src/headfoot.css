@@ -15,7 +15,6 @@
 main {
     width: 100%;
     margin-bottom: 3rem;
-    height: 100%;
 }
 
 body {
@@ -38,9 +37,9 @@ body {
 
 header, .header {
     text-align: center;
-    position: fixed;
+    position: sticky;
     width: 100%;
-    z-index: 999;
+    /* z-index: 999; */
     background: var(--darkest-green);
 }
 
@@ -207,97 +206,17 @@ nav a:hover {
 
 /* nav bar ends */
 
-/* login content starts */
 
 
-.card {
-    width: 50%;
-    transition: 0.3s;
-    background-color: var(--green-theme);
-    position: relative;
-    display: inline-block;
-    margin: 1rem;
-    border-radius: 1rem;
-}
-
-.card img {
-    border-radius: 1rem;
-}
-
-.card:hover {
-    box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.7);
-    transform: translate(0, -5px);
-}
-
-.containers {
-    padding: 10px 20px;
-    text-align: left;
-    color: #fff;
-}
-
-.category {
-    text-decoration: none;
-    color: var(--light-green);
-    font-weight: bold;
-    font-size: 0.85em;
-}
-
-.category:hover {
-    text-decoration: underline;
-}
-
-h5 {
-    margin: 0;
-    margin-top: 2px;
-}
-
-.login {
-    text-decoration: none;
-    color: var(--light-green);
-}
-
-.category p {
-    margin-top: 7px;
-}
-
-.login:hover {
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 1024px) {
-    .card {
-        width: 40%;
-        flex-direction: column;
-    }
-}
-
-@media only screen and (min-device-width: 550px) and (max-device-width: 650px) {
-    .card {
-        width: 90;
-        margin: 1%;
-        margin-top: 1rem;
-    }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 550px) {
-    .card {
-        width: 98%;
-        margin: 1%;
-        margin-top: 1rem;
-    }
-}
-
-/* login content ends */
 
 /* footer starts */
 footer {
     background: #0e3d24;
     width: 100%;
     bottom: 0;
-    margin-top: 3rem;
+    margin-top: 100rem;
     left: 0;
+    
 }
 
 footer .content {

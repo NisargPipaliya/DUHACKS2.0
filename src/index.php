@@ -1,6 +1,7 @@
 <?php
 require "dbconnect.php";
 session_start();
+// session_destroy();
 
 ?>
 <!DOCTYPE html>
@@ -20,23 +21,61 @@ session_start();
         justify-items: center;
         align-items: center;
         width: 60%;
-        height: 20rem;
+        
         margin: 10rem auto auto auto;
         text-align: center;
     
     }
+    @media only screen and (max-width:750px) {
+        .main {
+            flex-direction: column;
+            /* width: 80%; */
+        }
     
+        .card {
+            width: 90%;
+            margin: 1%;
+        }
+    }
 </style>
 <body>
-    <header>
+    
+<header class="header">
         <h1 class="logo">FarMart</h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="signin.html">Sign in</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <?php if($_SESSION['loggedin']==false){?>
+                <li><a href="signin.php">Sign in</a></li>
+                <?php } else {?>
+                <li><a href="logout.php">log out</a></li>
+
+                    <?php }?>
+                <!-- <a class="nav-link active hover-effect user" aria-current="page" href="<?php
+               
+                  if($_SESSION['loggedin']){
+                  echo 'logout.php';
+                  }
+                  else
+                  {
+                      echo 'signin.php';
+                  }
+               
+              ?>">
+              <?php
+               
+                  if($_SESSION['loggedin']){
+                  echo 'Logout';
+                  }
+                  else
+                  {
+                      echo 'Login/Register' ;
+                  }
+               
+              ?></a> -->
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -50,7 +89,7 @@ session_start();
                 <a href="#">
                     <img src="../images/veggies.avif" alt="mountains" style="width:100%">
                     <div class="containers">
-                        <a class="category" href="#">Customers<a>
+                        <a class="category" href="cards.php">Customers<a>
                                 <h5><b> Buy Dairy Products Straight through our verified farms.</b></h5>
 
                                 <p> <a class="login" href="#" style="padding-left: 0;">Sign In</a>
@@ -89,10 +128,10 @@ session_start();
           <div class="link-boxes">
             <ul class="box">
               <li class="link_name">Links</li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="signin.html">Sign in</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="about.php">About</a></li>
+              <li><a href="contact.php">Contact</a></li>
+              <li><a href="signin.php">Sign in</a></li>
     
             </ul>
             <ul class="box">
@@ -124,7 +163,15 @@ session_start();
           </div>
         </div>
       </footer>
-    <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script>
+    $("header").load("header.php");
+    $("footer").load("footer.php");
+  </script> -->
+
+  <script src="script.js"></script>
+    
+    
 </body>
 
 </html>
