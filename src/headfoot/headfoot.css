@@ -37,9 +37,9 @@ body {
 
 header, .header {
     text-align: center;
-    position: fixed;
+    position: sticky;
     width: 100%;
-    z-index: 999;
+    /* z-index: 999; */
     background: var(--darkest-green);
 }
 
@@ -214,8 +214,9 @@ footer {
     background: #0e3d24;
     width: 100%;
     bottom: 0;
-    margin-top: 3rem;
+    margin-top: 100rem;
     left: 0;
+    
 }
 
 footer .content {

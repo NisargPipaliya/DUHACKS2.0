@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarMart</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <style>
@@ -71,7 +71,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         border-radius: 10px;
         text-align: center;
     }
-    .main{
+
+    .main {
         display: grid;
         margin: 6rem auto auto;
     }
@@ -152,25 +153,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     .forgot a {
         color: rgb(177, 228, 195);
     }
+
     @media (max-width:750px) {
-        html{
+        html {
             font-size: 0.7rem;
         }
-        .main{
-           display: grid;
-           justify-content: center;
+
+        .main {
+            display: grid;
+            justify-content: center;
         }
     }
+
     @media (max-width:490px) {
-        html{
+        html {
             font-size: 0.7rem;
         }
     }
 </style>
 
 <body>
-    <main>       
-        
+
+    <header></header>
+    <main>
+
     </main>
     <div class="main">
         <div class="form">
@@ -185,13 +191,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                     <input type="password">
                 </div>
                 <div class="inputBox">
-                    <input type="submit" name="" value="Sign In"> 
+                    <input type="submit" name="" value="Sign In">
                 </div>
             </div>
             <p class="forgot">Not Registered Yet? <a href="#">Click Here</a></p>
-            
+
         </div>
     </div>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("header").load("./headfoot/header.html");
+        $("footer").load("./headfoot/footer.html");
+    </script>
 
     <script src="script.js"></script>
 </body>

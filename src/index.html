@@ -20,7 +20,7 @@ session_start();
         justify-items: center;
         align-items: center;
         width: 60%;
-        height: 20rem;
+        
         margin: 10rem auto auto auto;
         text-align: center;
     
@@ -29,6 +29,7 @@ session_start();
 </style>
 <body>
     
+  <header></header>
     <main>
 
         <div class="main">
@@ -61,8 +62,16 @@ session_start();
         </div>
     </main>
     
+  <footer></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $("header").load("./headfoot/header.html");
+    $("footer").load("./headfoot/footer.html");
+  </script>
+
+  <script src="script.js"></script>
     
-    <script src="script.js"></script>
+    
 </body>
 
 </html>
