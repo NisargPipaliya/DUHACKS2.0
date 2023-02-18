@@ -1,0 +1,55 @@
+body{
+    box-sizing: border-box;
+    /* max-width: 1000px; */
+}
+.business{
+    position: relative;
+    bottom: -1%;
+    right: 7%;
+    height: 99%;
+}
+    .navbar-brand{
+        font-size: xx-large;
+        position: relative;
+        left: -15%;
+    }
+h1{
+    font-family: 'Lobster';
+    line-height: 71px;
+    margin-top: 20%;
+}
+#quad{
+    color:#0030ff;  
+}
+.btn-outline-light
+{
+    background-color: #fbc0d0;
+    border-color: rgb(44, 39, 39);
+    margin: 6% 3%;
+}
+.btn-outline-light:hover
+{
+    border-color: black;
+    /* background-color: #fbc0d0; */
+    /* border-color: rgb(44, 39, 39); */
+}
+.ic{
+    height:12%;
+    width:7%;
+}
+.bg-light{
+    --bs-bg-opacity: 0;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}   
+/* .navbar-brand{
+    position: absolute;
+}
+
+.navbar-toggler{
+    margin-left: auto;
+    position: relative;
+} */
+
+.navbar-expand-lg .navbar-collapse{
+    margin-left: 79%;
+} 
