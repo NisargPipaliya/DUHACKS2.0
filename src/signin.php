@@ -224,9 +224,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
           <div class="link-boxes">
             <ul class="box">
               <li class="link_name">Links</li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="about.php">About</a></li>
+              <li><a href="contact.php">Contact</a></li>
               <li><a href="signin.html">Sign in</a></li>
     
             </ul>
