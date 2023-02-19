@@ -87,7 +87,7 @@ $_SESSION['isc']=false;
                 <a href="#">
                     <img src="../images/farmer1.avif" alt="mountains" style="width:100%">
                     <div class="containers">
-                        <a class="category" href="#">Farmers<a>
+                        <a class="category" href="plans.php">Farmers<a>
                                 <h5><b>Sell your yield at a fair price and stop getting exploited.</b></h5>
 
                                 <p> <a class="login" href="signin.php">Sign In</a>

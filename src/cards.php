@@ -52,7 +52,7 @@ session_start();
             height: auto;
             cursor: pointer;
             object-fit: cover;
-            border-radius: 100%;
+            border-radius: 10% ;
             margin-bottom: 10px;
             transition: transform 0.3s ease-in-out;
         }
