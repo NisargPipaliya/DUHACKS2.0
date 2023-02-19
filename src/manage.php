@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             if(in_array($_POST['Item_name'],$myitem))
             {
                 echo "<script> alert('item already added')
-                window.location.href='cards.php';
+                window.location.href='index.php';
                 </script>
                 ";
             }
@@ -20,12 +20,11 @@ if($_SERVER['REQUEST_METHOD']=='POST')
                 $count=count($_SESSION['cart']);
             $_SESSION['cart'][$count]=array('Item_name'=>$_POST['Item_name'], 'Price'=> $_POST['price'],'quantity'=>1);
             echo "<script> alert('item  added')
-            window.location.href='card.php';
+            window.location.href='index.php';
             </script>
             ";
-
            
-
+            
             }
              // print_r($_SESSION['cart']);
         }else{

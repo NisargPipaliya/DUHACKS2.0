@@ -1,5 +1,7 @@
 <?php
 require 'dbconnect.php';
+session_start();
+// print_r($_SESSION['cart']);
 
 ?>
 <!DOCTYPE html>
@@ -85,7 +87,7 @@ require 'dbconnect.php';
         }
 
         .main {
-            margin-top: 10rem;
+            margin-top: 5rem;
         }
 
         .buttons {
@@ -97,7 +99,7 @@ require 'dbconnect.php';
         }
 
         .buttons button {
-            width: 50%;
+            width: 100%;
             
         }
 
@@ -132,6 +134,7 @@ require 'dbconnect.php';
                     {   
                         while($row=mysqli_fetch_array($query_run))
                         {  ?>
+                        <form method="post" action="manage.php">
                             <div class="product">
                                 <img src="../images/farmer1.avif" alt="Product 1">
                                 <h3> <?php echo $row['NAME'] ?></h3>
@@ -139,12 +142,16 @@ require 'dbconnect.php';
 
                                 <p style=" padding: 0px 10px 0px 10px ;"> <?php  echo $row['description']?>
                                 </p>
+                                <input type=hidden value="<?php echo  $row['NAME'] ?>" name="Item_name">
+                                <input type=hidden value="<?php  echo $row['price'] ?>" name="price">
+
                             <div class="buttons">
 
-                                    <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
-                                    <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
+                                    <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;" name="add" >Add To Cart</button>
+                                    <!-- <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button> -->
                                 </div>
                             </div>
+                        </form>
                      <?php
                      }
                     }else{

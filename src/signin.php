@@ -159,6 +159,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             font-size: 0.7rem;
         }
     }
+    main{
+        min-height:0px;
+        
+    }
 </style>
 
 <body>
@@ -182,6 +186,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         
         
     </main>
+
     <div class="main">
         <form action="signin.php" method="post"> 
         <div class="form">
