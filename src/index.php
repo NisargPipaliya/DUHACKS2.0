@@ -1,6 +1,9 @@
 <?php
 require "dbconnect.php";
 session_start();
+
+// $_SESSION['loggedin']=false;
+
 // session_destroy();
 
 ?>
@@ -82,6 +85,7 @@ session_start();
             <span></span>
         </label>
     </header>
+    
     <main>
 
         <div class="main">

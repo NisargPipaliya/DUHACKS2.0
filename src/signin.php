@@ -29,19 +29,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $result = mysqli_query($conn,$sql);
         $check=mysqli_fetch_assoc($result);
         $_SESSION['loggedin'] = true;
-        // $_SESSION['promoter'] = false;
-        // $_SESSION['investor'] = false;
-
-        // if($check["equity"] != NULL)
-        // {
-        //   $_SESSION['promoter'] = true;
-        // }
-        // else if($check['education'] != NULL)
-        // {
-        //   $_SESSION['investor'] = true;
-        // }
-
-        
+        if($username=='admin' && $password=='admin')
+            $_SESSION['adminl']=true;
+      
         header("location: index.php");
     }
     else

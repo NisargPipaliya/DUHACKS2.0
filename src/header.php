@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 
-session_start();
+// session_start();
 // session_destroy();
-?>
+// ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,34 +24,7 @@ session_start();
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <?php if($_SESSION['loggedin']==false){?>
-                <li><a href="signin.php">Sign in</a></li>
-                <?php } else {?>
-                <li><a href="logout.php">log out</a></li>
-
-                    <?php }?>
-                <!-- <a class="nav-link active hover-effect user" aria-current="page" href="<?php
-               
-                  if($_SESSION['loggedin']){
-                  echo 'logout.php';
-                  }
-                  else
-                  {
-                      echo 'signin.php';
-                  }
-               
-              ?>">
-              <?php
-               
-                  if($_SESSION['loggedin']){
-                  echo 'Logout';
-                  }
-                  else
-                  {
-                      echo 'Login/Register' ;
-                  }
-               
-              ?></a> -->
+                
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">

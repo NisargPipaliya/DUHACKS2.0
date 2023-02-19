@@ -83,7 +83,9 @@
 <script src=""></script>
 
 <body>
-  <header></header>
+  <header>
+  <?php include('header.php')?>
+</header>
   <main>
 
     <div class="about-section">
@@ -101,12 +103,8 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer>   <?php include('footer.php')?> </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $("header").load("./headfoot/header.html");
-    $("footer").load("./headfoot/footer.html");
-  </script>
 
   <script src="script.js"></script>
 </body>

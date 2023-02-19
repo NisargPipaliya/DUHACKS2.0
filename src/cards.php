@@ -1,3 +1,7 @@
+<?php
+require 'dbconnect.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarMart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="headfoot.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -115,21 +120,40 @@
 
 
 <body>
-    <header></header>
+    <?php include('header.php')?>
     <main>
         <div class="main">
             <div class="containe">
-                <div class="product">
-                    <img src="../images/farmer1.avif" alt="Product 1">
-                    <h3>Product 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                   <div class="buttons">
+                <?php 
+                    $query='select * from fruits ';
+                    $query_run=mysqli_query($conn,$query);
+                    $check=mysqli_num_rows($query_run) >0 ;
+                    if($check)
+                    {   
+                        while($row=mysqli_fetch_array($query_run))
+                        {  ?>
+                            <div class="product">
+                                <img src="../images/farmer1.avif" alt="Product 1">
+                                <h3> <?php echo $row['NAME'] ?></h3>
+                            <p><h4  style=" padding:0px ; margin:0px;"> <?php echo  $row['price']?>/Kg</h4></p>
 
-                        <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
-                        <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
-                    </div>
-                </div>
-                <div class="product">
+                                <p style=" padding: 0px 10px 0px 10px ;"> <?php  echo $row['description']?>
+                                </p>
+                            <div class="buttons">
+
+                                    <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
+                                    <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
+                                </div>
+                            </div>
+                     <?php
+                     }
+                    }else{
+                        echo "no "; 
+                    }
+                     ?>   
+            
+                
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -138,8 +162,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -148,8 +172,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -158,9 +182,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -169,8 +192,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -179,8 +202,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -189,8 +212,8 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
-                <div class="product">
+                </div> -->
+                <!-- <div class="product">
                     <img src="../images/farmer1.avif" alt="Product 2">
                     <h3>Product 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -199,15 +222,15 @@
                         <button style="color:#0e3d24; background:#6cbba1;font-weight:bold;">Add To Cart</button>
                         <button style="color:#6cbba1; background:#0e3d24; font-weight:bold;">Buy Now</button>
                     </div>
-                </div>
+                </div> -->
 
             </div>
     </main>
-    <footer></footer>
+    <?php include('footer.php')?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $("header").load("header.php");
-        $("footer").load("footer.php");
+        // $("header").load("header.php");
+        // $("footer").load("footer.php");
     </script>
 
     <script src="script.js"></script>
