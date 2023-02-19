@@ -71,7 +71,7 @@ $_SESSION['isc']=false;
           <!-- <form type=hidden> -->
             <div class="card">
                 <a href="cards.php">
-                    <img src="../images/veggies.avif" alt="mountains" style="width:100%">
+                    <img src="../images/veggies.avif" alt="mountains" style="width:100%" href="cards.php">
                     <div class="containers">
                         <a class="category" href="cards.php">Customers<a>
                                 <h5><b> Buy Dairy Products Straight through our verified farms.</b></h5>
@@ -85,7 +85,7 @@ $_SESSION['isc']=false;
           <!-- <form type=hidden> -->
             <div class="card">
                 <a href="#">
-                    <img src="../images/farmer1.avif" alt="mountains" style="width:100%">
+                    <img src="../images/farmer1.avif" alt="mountains" style="width:100%" href="plans.php">
                     <div class="containers">
                         <a class="category" href="plans.php">Farmers<a>
                                 <h5><b>Sell your yield at a fair price and stop getting exploited.</b></h5>
