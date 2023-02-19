@@ -1,6 +1,6 @@
 <!-- <?php
 
-// session_start();
+session_start();
 // session_destroy();
 // ?> -->
 <!DOCTYPE html>
@@ -24,6 +24,11 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <?php if($_SESSION['loggedin']==false){?>
+                <li><a href="signin.php">Sign in</a></li>
+                <?php } else {?>
+                <li><a href="logout.php">log out</a></li>
+                    <?php }?>
                 
             </ul>
         </nav>

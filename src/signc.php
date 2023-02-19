@@ -161,7 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     main{
         min-height:0px;
-
+        
     }
 </style>
 
@@ -204,9 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                     <input type="submit" name="submit" value="Sign In"> 
                 </div>
             </div>
-            <p class="forgot">Not Registered Yet? <a href="signupcustomer.php">Customer</a></p>
-            <p class="forgot">Not Registered Yet? <a href="signupgardener.php">Owner</a></p>
-
+            <p class="forgot">Not Registered Yet? <a href="#">Click Here</a></p>
             
         </div>
 </form>

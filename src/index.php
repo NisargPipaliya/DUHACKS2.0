@@ -1,6 +1,7 @@
 <?php
 require "dbconnect.php";
 session_start();
+$_SESSION['isc']=false;
 
 // $_SESSION['loggedin']=false;
 
@@ -55,30 +56,8 @@ session_start();
                 <li><a href="signin.php">Sign in</a></li>
                 <?php } else {?>
                 <li><a href="logout.php">log out</a></li>
-
                     <?php }?>
-                <!-- <a class="nav-link active hover-effect user" aria-current="page" href="<?php
                
-                  if($_SESSION['loggedin']){
-                  echo 'logout.php';
-                  }
-                  else
-                  {
-                      echo 'signin.php';
-                  }
-               
-              ?>">
-              <?php
-               
-                  if($_SESSION['loggedin']){
-                  echo 'Logout';
-                  }
-                  else
-                  {
-                      echo 'Login/Register' ;
-                  }
-               
-              ?></a> -->
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -89,20 +68,21 @@ session_start();
     <main>
 
         <div class="main">
+          <!-- <form type=hidden> -->
             <div class="card">
-                <a href="#">
+                <a href="cards.php">
                     <img src="../images/veggies.avif" alt="mountains" style="width:100%">
                     <div class="containers">
                         <a class="category" href="cards.php">Customers<a>
                                 <h5><b> Buy Dairy Products Straight through our verified farms.</b></h5>
-
-                                <p> <a class="login" href="#" style="padding-left: 0;">Sign In</a>
+                                <input type=hidden value="customer">
+                                <p> <a class="login" href="signin.php" style="padding-left: 0;">Sign In</a>
                                 </p>
-
                     </div>
                 </a>
             </div>
-
+          <!-- </form> -->
+          <!-- <form type=hidden> -->
             <div class="card">
                 <a href="#">
                     <img src="../images/farmer1.avif" alt="mountains" style="width:100%">
@@ -110,11 +90,12 @@ session_start();
                         <a class="category" href="#">Farmers<a>
                                 <h5><b>Sell your yield at a fair price and stop getting exploited.</b></h5>
 
-                                <p> <a class="login" href="#">Sign In</a>
+                                <p> <a class="login" href="signin.php">Sign In</a>
                                 </p>
                     </div>
                 </a>
             </div>
+          <!-- </form> -->
         </div>
     </main>
     

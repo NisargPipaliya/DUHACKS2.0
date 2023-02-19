@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - FarMart</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="headfoot.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-</head>
-<style>
+  <style>
   body {
     min-height: 100vh;
     display: flex;
@@ -18,7 +19,7 @@
   }
 
   .about-section {
-    background: url(/images/about-us.avif) no-repeat left;
+    background: url(../images/about-us.avif) no-repeat left;
     background-size: 55%;
     background-color: rgb(177, 228, 195);
     overflow: hidden;
@@ -79,8 +80,13 @@
       padding: 60px;
     }
   }
+  header.header
+  {
+    position: fixed ;
+  }
 </style>
-<script src=""></script>
+
+</head>
 
 <body>
   <header>
